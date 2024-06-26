@@ -1,0 +1,30 @@
+Disadvantages of shell script:-
+shell script will not work on all linux distributers.
+scalabuility:- difficult to manage more number of servers.
+error handling and vallidations needs to do manually.
+shell will work for linux, not with external systems.
+
+CONFIGURATION MANAGMENT:-
+TO make server ready for application deployment is called configuration managment.
+
+What is Deployment:-
+1)Stop the server.
+2)Remove the old code
+3)Download new code
+4)Restart the server
+
+Advantages of Ansible over Shell:-
+Idempotence:- In shell script, If you run a program multiple times it can create the same thing multiple times. In case of ansible if not exist it will create if sxit it will ignore. so here Idempotence means even if you run your program multiple times, it should create any damage.
+Error Handling:- here it will handle errors automatially 
+Readable and maintainable:- Easy to read and understand no need of linux knowledge heavily.
+Vault:- To manage senstive information like username and passwords we habe anisble vault.
+Rich Modules:- Ansible has rich modules, which is helpful to connect to the external systems like git or ec2
+Agent Less:- 
+
+As a DevOps engineer responsiblity is to perform CRUD operations with configurations, maeans create configuration,
+Creation of configuration --> should be fast and accurate
+Update the configuration --> any changes in configuration should be rolled out asap.
+Delete the configuration --> delete the configuration if not required.
+Read the configuration --> it is easy to read the configuration of server through ansible playbooks.
+
+
