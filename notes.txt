@@ -27,4 +27,24 @@ Update the configuration --> any changes in configuration should be rolled out a
 Delete the configuration --> delete the configuration if not required.
 Read the configuration --> it is easy to read the configuration of server through ansible playbooks.
 
+HOW TO CONNECT ANSIBLE SERVER WITH NODES:-
+Command is ansible -i <node public ip address>, all -e anisible_user=centos -e ansible_password=DevOps321 -m ping 
+Here -i is inventory, -m is module.
+
+How to install a package on a node using ansible server:-
+Run the following command in ansible server so that it will install the nginx package on the node.
+ansible -i <node public ip address>, all -e anisible_user=centos -e ansible_password=DevOps321 --become -m yum -a "name = naginx state=present"
+here -- become means you will be the root user.
+
+How to run nginx on a node:-
+command is:-
+ansible -i <node public ip address>, all -e anisible_user=centos -e ansible_password=DevOps321 --become -m service -a "name = naginx state=started"
+
+PLAYBOOK:-
+Keep all the modules/commands in a file
+Keep some validations, conditions, loops, variables, now run the file, here in ansible it is called playbook whwere as in linux it is called shell script.
+So playbook is collection of modules/collections.
+
+PLAYBOOK has a syntax it is written in YAML Yet Another Markup language.
+
 
